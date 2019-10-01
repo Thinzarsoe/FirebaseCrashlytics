@@ -1,20 +1,16 @@
-//
-//  ViewController.swift
-//  FirebaseCrashlytics
-//
-//  Created by Thinzar Soe on 10/1/19.
-//  Copyright © 2019 Thinzar Soe. All rights reserved.
-//
-
 import UIKit
+import Crashlytics
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    @IBAction func onCrashAppButtonClicked(_ sender: UIButton) {
+        
+        Crashlytics.sharedInstance().crash()
+        
+    }
+    
 }
-
